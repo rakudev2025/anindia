@@ -90,7 +90,7 @@ const CTA = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="https://anindia.co.id" 
+            href="https://dievaluasi.id" 
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-emerald-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-900 transition"

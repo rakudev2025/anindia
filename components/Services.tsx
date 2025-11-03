@@ -173,7 +173,7 @@ const Services = () => {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://anindia.co.id" 
+              href="https://dievaluasi.id" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition"

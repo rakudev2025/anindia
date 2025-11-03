@@ -70,7 +70,7 @@ const Navbar = () => {
               Testimoni
             </button>
             <a 
-              href="https://app.atmajadesign.com/" 
+              href="https://dievaluasi.id" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-emerald-600 transition font-medium"
@@ -129,7 +129,7 @@ const Navbar = () => {
               Testimoni
             </button>
             <a 
-              href="https://app.atmajadesign.com/" 
+              href="https://dievaluasi.id" 
               target="_blank" 
               rel="noopener noreferrer"
               className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-emerald-50 rounded-lg font-medium transition"

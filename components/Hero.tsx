@@ -68,7 +68,7 @@ const Hero = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://app.atmajadesign.com/" 
+                href="https://dievaluasi.id" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="border-2 border-emerald-600 text-emerald-600 px-8 py-4 rounded-lg hover:bg-emerald-50 transition text-center"

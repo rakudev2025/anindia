@@ -78,7 +78,7 @@ const Footer = () => {
               </motion.li>
               <motion.li whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                 <a 
-                  href="https://app.atmajadesign.com/" 
+                  href="https://dievaluasi.id" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="hover:text-emerald-400 transition font-semibold"
