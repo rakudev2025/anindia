@@ -25,9 +25,9 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-emerald-50">
+    <section id="about" className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-emerald-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left - Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -38,8 +38,8 @@ const About = () => {
             <motion.img
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 200 }}
-              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=400&fit=crop" 
-              alt="Team Collaboration" 
+              src="/about-team.png" 
+              alt="Tim Kolaborasi Anindia" 
               className="rounded-2xl shadow-2xl"
             />
           </motion.div>
@@ -56,7 +56,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-3xl md:text-4xl font-bold text-gray-900 mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6"
             >
               Tentang PT Anindia Karya Nusantara
             </motion.h2>
@@ -66,7 +66,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-lg text-gray-600 mb-6 leading-relaxed"
+              className="text-base sm:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed"
             >
               PT Anindia Karya Nusantara adalah perusahaan teknologi yang berfokus pada pengembangan solusi digital untuk sektor pendidikan. Kami menyediakan sistem informasi akademik, platform pembelajaran, aplikasi mobile, dan layanan software development khusus bidang pendidikan.
             </motion.p>
@@ -76,7 +76,7 @@ const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4, duration: 0.6 }}
-              className="text-gray-600 mb-8 leading-relaxed"
+              className="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8 leading-relaxed"
             >
               Dengan pengalaman lebih dari 10 tahun, kami telah bermitra dengan berbagai universitas, sekolah, dan lembaga pendidikan di Indonesia. Kami juga aktif dalam penelitian dan pengembangan teknologi AR/VR, publikasi jurnal ilmiah, serta inovasi pembelajaran digital.
             </motion.p>

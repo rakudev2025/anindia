@@ -2,26 +2,33 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Quote } from 'lucide-react';
 
 const Testimonials = () => {
   const testimonials = [
     { 
-      name: "Dr. Ahmad Fauzi", 
-      role: "Rektor Universitas Negeri Jakarta", 
-      text: "Sistem informasi akademik yang dikembangkan Anindia sangat membantu dalam digitalisasi kampus kami. Implementasi cepat dan support yang responsif.",
+      name: "Komang Mahendra", 
+      role: "Direktur Utama, EduMandiri Network", 
+      text: "Sistem informasi akademik dari Anindia benar-benar mengubah cara kami mengelola data mahasiswa. Proses yang dulu memakan waktu berhari-hari, kini bisa selesai dalam hitungan jam. Tim support-nya juga sangat responsif.",
+      initial: "K"
+    },
+    { 
+      name: "Agus Supriatmaja", 
+      role: "Kepala Divisi Digital, Nusacode Academy", 
+      text: "Platform e-learning yang dikembangkan sangat user-friendly. Peserta pelatihan kami bisa mengakses materi kapan saja. Fitur progress tracking membantu kami memantau perkembangan setiap peserta dengan mudah.",
       initial: "A"
     },
     { 
-      name: "Siti Rahmawati, M.Pd", 
-      role: "Kepala Sekolah SMAN 1 Bandung", 
-      text: "Platform e-learning yang user-friendly dan fitur yang lengkap. Guru dan siswa sangat terbantu, terutama saat pembelajaran hybrid.",
-      initial: "S"
+      name: "Bagastia Atmaja", 
+      role: "Manajer Akademik, Aksara Tekno College", 
+      text: "Implementasi virtual lab berbasis AR/VR untuk simulasi praktikum sangat inovatif. Mahasiswa bisa berlatih skenario nyata secara virtual sebelum terjun ke lapangan. Teknologi yang luar biasa!",
+      initial: "B"
     },
     { 
-      name: "Prof. Budi Santoso", 
-      role: "Direktur Lembaga Penelitian IPB", 
-      text: "Implementasi AR/VR untuk virtual lab sangat inovatif. Mahasiswa bisa melakukan praktikum secara virtual dengan pengalaman yang mendekati real.",
-      initial: "B"
+      name: "Gio Satria", 
+      role: "Direktur Operasional, Bimantara Learning Center", 
+      text: "DiEvaluasi membantu kami menyediakan tryout online untuk siswa-siswa kami. Sistem penilaian otomatis dan analitik hasilnya sangat detail. Orang tua siswa pun bisa memantau progres anak mereka secara real-time.",
+      initial: "G"
     }
   ];
 
@@ -30,18 +37,19 @@ const Testimonials = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
+        staggerChildren: 0.15
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
-      scale: 1,
+      y: 0,
       transition: {
-        duration: 0.5
+        duration: 0.6,
+        ease: [0.17, 0.55, 0.55, 1]
       }
     }
   };
@@ -56,11 +64,20 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
+          <motion.div
+            initial={{ scale: 0.8, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="inline-block bg-emerald-100 text-emerald-700 px-4 py-2 rounded-full text-sm font-medium mb-4"
+          >
+            Apa Kata Mereka
+          </motion.div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Testimoni Klien
+            Testimoni Klien Kami
           </h2>
-          <p className="text-lg text-gray-600">
-            Kepercayaan dari institusi pendidikan terkemuka
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Kepercayaan dari berbagai institusi pendidikan dan pelatihan di Bali
           </p>
         </motion.div>
 
@@ -69,19 +86,24 @@ const Testimonials = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8"
+          className="grid sm:grid-cols-2 gap-6 lg:gap-8"
         >
           {testimonials.map((testimonial, idx) => (
             <motion.div
               key={idx}
               variants={itemVariants}
               whileHover={{ 
-                y: -10,
-                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)"
+                y: -8,
+                boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.15)"
               }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="bg-white p-8 rounded-xl shadow-lg cursor-pointer"
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg relative overflow-hidden group"
             >
+              {/* Decorative quote icon */}
+              <div className="absolute top-4 right-4 opacity-5 group-hover:opacity-10 transition-opacity duration-300">
+                <Quote className="w-16 h-16 text-emerald-600" />
+              </div>
+
               {/* Stars */}
               <motion.div
                 initial={{ opacity: 0 }}
@@ -97,7 +119,7 @@ const Testimonials = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.1 + 0.4 + i * 0.05 }}
-                    className="text-yellow-400 text-xl"
+                    className="text-yellow-400 text-lg"
                   >
                     ★
                   </motion.span>
@@ -110,10 +132,13 @@ const Testimonials = () => {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 + 0.5 }}
-                className="text-gray-600 mb-6 italic"
+                className="text-gray-600 mb-6 italic leading-relaxed text-sm sm:text-base"
               >
-                "{testimonial.text}"
+                &ldquo;{testimonial.text}&rdquo;
               </motion.p>
+
+              {/* Divider */}
+              <div className="w-12 h-0.5 bg-emerald-200 mb-4"></div>
 
               {/* User Info */}
               <motion.div
@@ -124,21 +149,24 @@ const Testimonials = () => {
                 className="flex items-center"
               >
                 <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.6 }}
-                  className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-lg"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ duration: 0.3 }}
+                  className="w-11 h-11 sm:w-12 sm:h-12 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-base sm:text-lg flex-shrink-0"
                 >
                   {testimonial.initial}
                 </motion.div>
-                <div className="ml-4">
-                  <p className="font-semibold text-gray-900">
+                <div className="ml-3 sm:ml-4 min-w-0">
+                  <p className="font-semibold text-gray-900 text-sm sm:text-base truncate">
                     {testimonial.name}
                   </p>
-                  <p className="text-sm text-gray-600">
+                  <p className="text-xs sm:text-sm text-gray-500 truncate">
                     {testimonial.role}
                   </p>
                 </div>
               </motion.div>
+
+              {/* Bottom accent line */}
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-emerald-400 to-teal-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
             </motion.div>
           ))}
         </motion.div>

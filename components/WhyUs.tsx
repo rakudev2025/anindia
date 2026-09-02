@@ -50,7 +50,7 @@ const WhyUs = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,10 +59,10 @@ const WhyUs = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Mengapa Memilih Anindia?
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Keunggulan yang membuat kami menjadi mitra terpercaya untuk transformasi digital pendidikan
           </p>
         </motion.div>
@@ -72,7 +72,7 @@ const WhyUs = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-4 gap-8"
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"
         >
           {reasons.map((item, idx) => (
             <motion.div
@@ -83,19 +83,19 @@ const WhyUs = () => {
                 scale: 1.05,
                 transition: { type: "spring", stiffness: 300 }
               }}
-              className="text-center p-6 hover:bg-emerald-50 rounded-xl transition cursor-pointer"
+              className="text-center p-4 sm:p-6 hover:bg-emerald-50 rounded-xl transition cursor-pointer"
             >
               <motion.div
                 whileHover={{ rotate: [0, -10, 10, -10, 0] }}
                 transition={{ duration: 0.5 }}
-                className="text-5xl mb-4"
+                className="text-3xl sm:text-5xl mb-3 sm:mb-4"
               >
                 {item.icon}
               </motion.div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
+              <h3 className="text-base sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3">
                 {item.title}
               </h3>
-              <p className="text-gray-600">
+              <p className="text-xs sm:text-base text-gray-600">
                 {item.desc}
               </p>
             </motion.div>

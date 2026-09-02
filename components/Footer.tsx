@@ -27,14 +27,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-gray-300 py-12">
+    <footer className="bg-gray-900 text-gray-300 py-10 sm:py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-4 gap-8 mb-8"
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8"
         >
           {/* Column 1 - Logo & Description */}
           <motion.div variants={itemVariants}>
@@ -54,8 +54,8 @@ const Footer = () => {
 
           {/* Column 2 - Layanan */}
           <motion.div variants={itemVariants}>
-            <h4 className="text-white font-semibold mb-4">Layanan</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Layanan</h4>
+            <ul className="space-y-2 text-xs sm:text-sm">
               <motion.li whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                 <a href="#services" className="hover:text-emerald-400 transition">
                   Sistem Informasi Akademik
@@ -91,26 +91,21 @@ const Footer = () => {
 
           {/* Column 3 - Perusahaan */}
           <motion.div variants={itemVariants}>
-            <h4 className="text-white font-semibold mb-4">Perusahaan</h4>
-            <ul className="space-y-2 text-sm">
+            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Perusahaan</h4>
+            <ul className="space-y-2 text-xs sm:text-sm">
               <motion.li whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
                 <a href="#about" className="hover:text-emerald-400 transition">
                   Tentang Kami
                 </a>
               </motion.li>
               <motion.li whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                <a href="#" className="hover:text-emerald-400 transition">
-                  Portofolio
+                <a href="#services" className="hover:text-emerald-400 transition">
+                  Layanan
                 </a>
               </motion.li>
               <motion.li whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                <a href="#" className="hover:text-emerald-400 transition">
-                  Karir
-                </a>
-              </motion.li>
-              <motion.li whileHover={{ x: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                <a href="#" className="hover:text-emerald-400 transition">
-                  Blog & Artikel
+                <a href="#testimonials" className="hover:text-emerald-400 transition">
+                  Testimoni
                 </a>
               </motion.li>
             </ul>
@@ -118,8 +113,8 @@ const Footer = () => {
 
           {/* Column 4 - Kontak */}
           <motion.div variants={itemVariants}>
-            <h4 className="text-white font-semibold mb-4">Kontak</h4>
-            <ul className="space-y-3 text-sm">
+            <h4 className="text-white font-semibold mb-3 sm:mb-4 text-sm sm:text-base">Kontak</h4>
+            <ul className="space-y-3 text-xs sm:text-sm">
               <motion.li
                 whileHover={{ x: 5 }}
                 transition={{ type: "spring", stiffness: 300 }}

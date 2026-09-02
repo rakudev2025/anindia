@@ -2,10 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { MessageCircle, FileDown } from 'lucide-react';
 
 const CTA = () => {
   return (
-    <section id="contact" className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600 overflow-hidden relative">
+    <section id="contact" className="py-16 sm:py-20 bg-gradient-to-r from-emerald-600 to-teal-600 overflow-hidden relative">
       {/* Animated Background Elements */}
       <motion.div
         animate={{
@@ -17,7 +18,7 @@ const CTA = () => {
           repeat: Infinity,
           ease: "linear"
         }}
-        className="absolute top-0 left-0 w-96 h-96 bg-white/10 rounded-full filter blur-3xl"
+        className="absolute top-0 left-0 w-64 sm:w-96 h-64 sm:h-96 bg-white/10 rounded-full filter blur-3xl"
       />
       <motion.div
         animate={{
@@ -29,7 +30,7 @@ const CTA = () => {
           repeat: Infinity,
           ease: "linear"
         }}
-        className="absolute bottom-0 right-0 w-96 h-96 bg-white/10 rounded-full filter blur-3xl"
+        className="absolute bottom-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-white/10 rounded-full filter blur-3xl"
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -38,7 +39,7 @@ const CTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-white mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6"
         >
           Siap Transformasi Digital Institusi Anda?
         </motion.h2>
@@ -48,7 +49,7 @@ const CTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="text-xl text-emerald-100 mb-8"
+          className="text-base sm:text-xl text-emerald-100 mb-6 sm:mb-8"
         >
           Konsultasikan kebutuhan teknologi pendidikan Anda dengan tim ahli kami
         </motion.p>
@@ -58,22 +59,28 @@ const CTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
         >
-          <motion.button
+          <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-white text-emerald-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition"
+            href="https://wa.me/6285737373999?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20PT%20Anindia%20Karya%20Nusantara.%20Bisa%20konsultasi%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-white text-emerald-600 px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-gray-100 transition inline-flex items-center justify-center gap-2 text-sm sm:text-base"
           >
-            Hubungi Kami
-          </motion.button>
-          <motion.button
+            <MessageCircle className="w-5 h-5" />
+            Hubungi via WhatsApp
+          </motion.a>
+          <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition"
+            href="mailto:rakudev2025@gmail.com?subject=Request%20Company%20Profile%20-%20PT%20Anindia%20Karya%20Nusantara&body=Yth.%20Tim%20PT%20Anindia%20Karya%20Nusantara%2C%0A%0ASaya%20tertarik%20untuk%20mendapatkan%20company%20profile.%20Mohon%20dapat%20dikirimkan.%0A%0ATerima%20kasih."
+            className="border-2 border-white text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition inline-flex items-center justify-center gap-2 text-sm sm:text-base"
           >
+            <FileDown className="w-5 h-5" />
             Download Company Profile
-          </motion.button>
+          </motion.a>
         </motion.div>
 
         {/* DiEvaluasi CTA */}
@@ -82,9 +89,9 @@ const CTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 0.6 }}
-          className="mt-12 pt-12 border-t border-emerald-400"
+          className="mt-10 sm:mt-12 pt-10 sm:pt-12 border-t border-emerald-400"
         >
-          <p className="text-emerald-100 mb-4">
+          <p className="text-emerald-100 mb-4 text-sm sm:text-base">
             Atau coba platform tryout online kami
           </p>
           <motion.a
@@ -93,7 +100,7 @@ const CTA = () => {
             href="https://dievaluasi.id" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-block bg-emerald-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-emerald-900 transition"
+            className="inline-block bg-emerald-800 text-white px-6 sm:px-8 py-3.5 sm:py-4 rounded-lg font-semibold hover:bg-emerald-900 transition text-sm sm:text-base"
           >
             Akses DiEvaluasi →
           </motion.a>
@@ -103,4 +110,4 @@ const CTA = () => {
   );
 };
 
-export default CTA;
+export default CTA;

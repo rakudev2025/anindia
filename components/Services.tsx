@@ -66,7 +66,7 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-16 sm:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -75,10 +75,10 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Layanan & Solusi Kami
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
             Solusi teknologi komprehensif untuk transformasi digital institusi pendidikan
           </p>
         </motion.div>
@@ -88,7 +88,7 @@ const Services = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-3 gap-8"
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
           {services.map((service, idx) => (
             <motion.div
@@ -96,7 +96,7 @@ const Services = () => {
               variants={itemVariants}
               whileHover={{ y: -10, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300 }}
-              className="bg-white border-2 border-gray-100 rounded-xl p-8 hover:border-emerald-500 hover:shadow-xl transition group"
+              className="bg-white border-2 border-gray-100 rounded-xl p-6 sm:p-8 hover:border-emerald-500 hover:shadow-xl transition group"
             >
               <motion.div 
                 whileHover={{ rotate: 360 }}
@@ -136,7 +136,7 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-16 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 md:p-12 text-white"
+          className="mt-12 sm:mt-16 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-6 sm:p-8 md:p-12 text-white"
         >
           <div className="max-w-3xl mx-auto text-center">
             <motion.div
@@ -148,7 +148,7 @@ const Services = () => {
             >
               Platform Unggulan
             </motion.div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4">
               DiEvaluasi - Platform Tryout Online Terpercaya
             </h3>
             <p className="text-emerald-100 mb-6">
